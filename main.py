@@ -13,6 +13,12 @@ score = 0
 center = (400, 300)
 radius = 100
 
+currency_per_click = 1
+upgrade_cost = 10
+level = 1
+
+upgrade_rect = pygame.Rect(50, 450, 200, 60)
+
 # Set up the main game loop
 running = True
 while running:
@@ -26,15 +32,29 @@ while running:
             mx, my = event.pos
             # Check if the click is inside the circle
             if math.hypot(mx - center[0], my - center[1]) <= radius:
-                score += 1
+                score += currency_per_click
+
+                # Check if the click is inside the upgrade button
+            elif upgrade_rect.collidepoint(event.pos):
+                if score >= upgrade_cost:
+                    score -= upgrade_cost
+                    currency_per_click += 1
+                    upgrade_cost *= 2
 
     # Draw the circle and score
     screen.fill((10, 10, 30))
     pygame.draw.circle(screen, (80, 140, 255), center, radius)
 
+    # Draw the upgrade button
+    pygame.draw.rect(screen, (70, 70, 200), upgrade_rect)
+
     # Draw the score text
     text = font.render(f"Score: {score}", True, (255, 255, 255))
+    uprade_text = font.render(f"Upgrade ({upgrade_cost})", True, (255, 255, 255))
+
+    # Center the score text and draw it on the screen
     screen.blit(text, (400 - text.get_width() // 2, 100))
+    screen.blit(uprade_text, (upgrade_rect.x + 10, upgrade_rect.y + 10))
 
     # Update the display and tick the clock
     pygame.display.flip()
