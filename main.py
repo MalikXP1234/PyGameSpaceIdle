@@ -1,5 +1,6 @@
 import math
 import pygame
+import auth
 
 # Initialize Pygame and set up the window
 pygame.init()
@@ -7,6 +8,12 @@ screen = pygame.display.set_mode((1200, 800))
 pygame.display.set_caption("Clicker")
 clock = pygame.time.Clock()
 font = pygame.font.SysFont(None, 64)
+
+username = auth.run_login(screen, clock)
+if username is None:     
+    pygame.quit()
+    raise SystemExit
+pygame.display.set_caption(f"Space Idle - {username}")
 
 # Initialize game variables
 score = 0
