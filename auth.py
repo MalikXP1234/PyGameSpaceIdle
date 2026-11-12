@@ -45,8 +45,7 @@ def sign_up(username, password, confirm):
     if username.lower() in data:
         return "That username is taken"
     salt = secrets.token_hex(16)
-    data[username.lower()] = {"name": username, "salt": salt,
-                              "hash": _hash(password, salt), "progress": {}}
+    data[username.lower()] = {"name": username, "salt": salt, "hash": _hash(password, salt), "progress": {}}
     _save(data)
     return None
 

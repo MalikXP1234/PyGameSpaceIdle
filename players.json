@@ -4,5 +4,17 @@
     "salt": "1b5ed693d0f22fb475d667ad62425e57",
     "hash": "fb6b0b42cc8383e95b7e34717d4401c2f15e9dbc0424dfb17fe4c593bf7ba0d9",
     "progress": {}
+  },
+  "bob": {
+    "name": "bob",
+    "salt": "c010c9f32f2101d85ffc4005c17816bd",
+    "hash": "0cbde45cbf4b1d26b39b9b9b050e320ed4c7e184803ed3253ec5baf8a355815f",
+    "progress": {}
+  },
+  "malik": {
+    "name": "malik",
+    "salt": "34d40e7495f0e538f9fe2d5cd660e253",
+    "hash": "feb15b54f21c870daf1d19cefd945a2cd25eee6b31eded0e5a239a331c7e9fef",
+    "progress": {}
   }
 }
