@@ -9,7 +9,7 @@ pygame.display.set_caption("Clicker")
 clock = pygame.time.Clock()
 font = pygame.font.SysFont(None, 64)
 
-# Create a login/signup screen and get the username
+# Create a login/signup screen and get the usernam
 #username = auth.run_login(screen, clock)
 #if username is None:     
 #    pygame.quit()
