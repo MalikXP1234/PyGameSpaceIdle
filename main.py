@@ -1,6 +1,8 @@
 import math
 import pygame
 import auth
+from auth import run_login, load_progress
+from account import account_page
 
 # Initialize Pygame and set up the window
 pygame.init()
