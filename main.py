@@ -32,16 +32,13 @@ idle_rate = 0
 upgrade_rect = pygame.Rect(50, 450, 200, 60)
 upgrade_idle_rect = pygame.Rect(50, 600, 200, 60)
 
-tab1_rect = pygame.Rect(800, 100, 200, 60)
-tab2_rect = pygame.Rect(800, 200, 200, 60)
-tab3_rect = pygame.Rect(800, 300, 200, 60)
+tab1_rect = pygame.Rect(800, 100, 300, 60)
+tab2_rect = pygame.Rect(800, 200, 300, 60)
+tab3_rect = pygame.Rect(800, 300, 300, 60)
 
-tab4_rect = pygame.Rect(800, 400, 200, 60)
-tab5_rect = pygame.Rect(800, 500, 200, 60)
-tab6_rect = pygame.Rect(800, 600, 200, 60)
-
-
-
+tab4_rect = pygame.Rect(800, 400, 300, 60)
+tab5_rect = pygame.Rect(800, 500, 300, 60)
+tab6_rect = pygame.Rect(800, 600, 300, 60)
 
 class Space_Idle:
     def __init__(self, name):
